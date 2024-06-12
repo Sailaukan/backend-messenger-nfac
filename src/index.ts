@@ -11,10 +11,10 @@ connectDB();
 
 app.use(logger);
 app.use(express.json());
-app.use('/api/v1/',globalRouter);
-
-
-
+app.use('/api/v1/', globalRouter);
+app.get('/api/events', (request, response) => {
+  response.send("Hello, world")
+})
 
 app.listen(PORT, () => {
   console.log(`Server runs at http://localhost:${PORT}`);

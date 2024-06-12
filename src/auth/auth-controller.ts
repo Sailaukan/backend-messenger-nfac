@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { CreateUserDto } from './dtos/CreateUser.dto';
 import AuthService from './auth-service';
+import UserModel from "./models/User"
 
 class AuthController {
   private authService: AuthService;

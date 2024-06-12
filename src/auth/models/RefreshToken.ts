@@ -1,8 +1,9 @@
 import mongoose, { Document, Schema } from 'mongoose';
+import { IUser } from './User';
 
 export interface IRefreshToken extends Document {
   token: string;
-  user: Schema.Types.ObjectId;
+  user: IUser;
 }
 
 const RefreshTokenSchema: Schema = new Schema({
